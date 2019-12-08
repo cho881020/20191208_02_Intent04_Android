@@ -21,5 +21,14 @@ class MainActivity : AppCompatActivity() {
 
         }
 
+
+        callBtn.setOnClickListener {
+//            누구에게 전화를 걸지 uri로 명시.
+            val uri = Uri.parse("tel:01051123237")
+            val intent = Intent(Intent.ACTION_CALL, uri)
+            startActivity(intent)
+        }
+
+
     }
 }
