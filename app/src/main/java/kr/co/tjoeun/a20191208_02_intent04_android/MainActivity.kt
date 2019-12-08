@@ -47,6 +47,13 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
+        kakaoAppBtn.setOnClickListener {
+//            deatils? 부터는 플레이스토어 링크를 검색해서 붙여넣기.
+            val uri = Uri.parse("market://details?id=com.kakao.talk&hl=ko")
+            val intent = Intent(Intent.ACTION_VIEW, uri)
+            startActivity(intent)
+        }
+
 
     }
 }
